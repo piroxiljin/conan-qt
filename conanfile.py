@@ -46,6 +46,7 @@ class QtConan(ConanFile):
         "serialport": [True, False],
         "svg": [True, False],
         "tools": [True, False],
+        "declarative": [True, False],
         "webengine": [True, False],
         "websockets": [True, False],
         "xmlpatterns": [True, False],
@@ -54,6 +55,7 @@ class QtConan(ConanFile):
     default_options = "shared=True", \
         "opengl=desktop", \
         "canvas3d=False", \
+        "declarative=False", \
         "gamepad=False", \
         "graphicaleffects=False", \
         "imageformats=False", \
@@ -109,6 +111,8 @@ class QtConan(ConanFile):
 
         if self.options.canvas3d:
             submodules.append("qtcanvas3d")
+        if self.options.declarative:
+            submodules.append("qtdeclarative")
         if self.options.gamepad:
             submodules.append("qtgamepad")
         if self.options.graphicaleffects:
@@ -262,6 +266,8 @@ class QtConan(ConanFile):
         libs = ['Concurrent', 'Core', 'DBus',
                 'Gui', 'Network', 'OpenGL',
                 'Sql', 'Test', 'Widgets', 'Xml']
+        if self.options.declarative:
+            libs += ['Qml', 'Quick', 'QuickParticles', 'QuickTest', 'QuickWidgets']
 
         self.cpp_info.libs = []
         self.cpp_info.includedirs = ["include"]
