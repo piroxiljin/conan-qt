@@ -1,22 +1,22 @@
 Conan package for Qt
 --------------------------------------------
 
-[![Build Status](https://travis-ci.org/osechet/conan-qt.svg?branch=testing/5.8.0)](https://travis-ci.org/osechet/conan-qt)
+[![Build Status](https://travis-ci.org/piroxiljin/conan-qt.svg?branch=master)](https://travis-ci.org/piroxiljin/conan-qt)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/gboj3x82d42eoasw/branch/testing/5.8.0?svg=true)](https://ci.appveyor.com/project/osechet/conan-qt)
+[![Build status](https://ci.appveyor.com/api/projects/status/o8sw0u1spu4m0ll8/branch/master?svg=true)](https://ci.appveyor.com/project/piroxiljin/conan-qt/branch/master)
 
-[ ![Download](https://api.bintray.com/packages/osechet/Conan/Qt%3Aosechet/images/download.svg?version=5.8.0%3Atesting) ](https://bintray.com/osechet/Conan/Qt%3Aosechet/5.8.0%3Atesting/link)
+[ ![Download](https://api.bintray.com/packages/piroxiljin/conan/Qt%3Apiroxiljin/images/download.svg?version=5.8.0%3Atesting) ](https://bintray.com/piroxiljin/conan/Qt%3Apiroxiljin/5.8.0%3Atesting/link)
 
 [Conan.io](https://conan.io) package for [Qt](https://www.qt.io) library. This package includes by default the Qt Base module (Core, Gui, Widgets, Network, ...). Others modules can be added using options.
 
-The packages generated with this **conanfile** can be found in [bintray.com](https://bintray.com/osechet/Conan).
+The packages generated with this **conanfile** can be found in [bintray.com](https://bintray.com/piroxiljin/conan).
 
 ## Reuse the package
 
 ### Basic setup
 
 ```
-$ conan install Qt/5.8.0@osechet/testing
+$ conan install Qt/5.8.0@piroxiljin/testing
 ```
 
 ### Project setup
@@ -25,7 +25,7 @@ If you handle multiple dependencies in your project is better to add a *conanfil
 
 ```
     [requires]
-    Qt/5.8.0@osechet/testing
+    Qt/5.8.0@piroxiljin/testing
 
     [options]
     Qt:shared=true # false
@@ -57,4 +57,4 @@ Project setup installs the library (and all his dependencies) and generates the 
 
 ### Upload packages to server
 
-    $ conan upload Qt/5.8.0@osechet/testing --all
+    $ conan upload Qt/5.8.0@piroxiljin/testing --all
